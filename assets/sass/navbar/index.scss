@@ -1,0 +1,63 @@
+.navbar {
+  padding-left: 100px;
+  padding-right: 100px;
+  background: linear-gradient(
+    173.42deg,
+    rgba(0, 0, 0, 0.35) 4.86%,
+    rgba(0, 0, 0, 0.15) 47.82%,
+    rgba(255, 255, 255, 0) 94.52%
+  );
+
+  transition: 0.2s all;
+  * {
+    font-family: $main-font;
+  }
+  &-scrolled {
+    background: black;
+  }
+  &-hidden {
+    top: -80px;
+  }
+  &-logo {
+    width: 97px;
+    height: 79px;
+    background: white;
+    margin-right: 40px;
+  }
+  &-number {
+    margin-left: auto;
+    color: white;
+    font-size: 14px;
+  }
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  &-flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  &-links {
+    display: flex;
+    width: fit-content;
+    border-bottom: 1px solid white;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+    li {
+      margin-right: 40px;
+      &:last-of-type {
+        margin-right: 0px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+      }
+    }
+  }
+}

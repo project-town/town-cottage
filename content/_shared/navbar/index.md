@@ -1,0 +1,17 @@
+---
+layout: common/navbar/index
+links:
+  - name: Концепция
+    value: Концепция
+  - name: Расположение
+    value: Расположение
+  - name: Планировки
+    value: Планировки
+  - name: Инфраструктура
+    value: Инфраструктура
+  - name: Строительство
+    value: Строительство
+  - name: Контакты
+    value: Контакты
+number: +38050 000 0000
+---
