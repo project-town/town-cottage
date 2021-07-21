@@ -12,10 +12,12 @@ boxes:
   - boxes/box-1.md
   - boxes/box-2.md
 
-callBtn:
-  - /_shared/btns/popup-btn.md
 secondarySlider:
   - secondary-slider.md
+extraText:
+  - hiddenText.md
+id: village-extra
+extraBtnText: Подробнее
 ---
 
 # leo **eco** village

@@ -1,4 +1,4 @@
-import { addEvent, getElement } from "../common/index.js";
+import { addEvent, getElement, getElements } from "../common/index.js";
 
 let scrollPos = 0;
 
@@ -22,10 +22,27 @@ const handleNavbarTransform = (navbar) => {
 };
 
 const addEvents = () => {
-  const languageMenu = getElement(".navbar-language");
-  addEvent(window, "click");
   const languageToggle = getElement(".navbar-language-selected");
   addEvent(languageToggle, "click", toggleLanguageSelect);
+  const mobileHamburger = getElement(".hamburger");
+  addEvent(mobileHamburger, "click", showMobileMenu);
+
+  const mobileClosBtn = getElement(".mobile-navbar-menu-close");
+  addEvent(mobileClosBtn, "click", hideMobileMenu);
+  const menuBtns = getElements(".mobile-navbar-menu li");
+  menuBtns.forEach((element) => {
+    addEvent(element, "click", hideMobileMenu);
+  });
+};
+
+const showMobileMenu = () => {
+  const menu = getElement(".mobile-navbar-menu");
+  menu.classList.add("mobile-navbar-menu-active");
+};
+
+const hideMobileMenu = () => {
+  const menu = getElement(".mobile-navbar-menu");
+  menu.classList.remove("mobile-navbar-menu-active");
 };
 
 const init = () => {

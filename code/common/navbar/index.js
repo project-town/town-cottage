@@ -1,10 +1,13 @@
 import React from "react";
 import images from "../../../assets/js/images";
 import { handleUrl } from "../../utils/url";
+import MobileMenu from "./mobile-menu";
 
-const Navbar = ({ links, number, _relativeURL, _ID, _body, languages }) => {
+const Navbar = (props) => {
+  const { links, number, _relativeURL, _ID, _body, languages } = props;
   return (
     <nav className="navbar screen">
+      <MobileMenu {...props} />
       <div className="navbar-flex">
         <a href="/#" className="navbar-logo">
           <img src={handleUrl(images.common.logo, _relativeURL, _ID)} />

@@ -12,10 +12,14 @@ boxes:
   - boxes/box-2.md
 
 callBtn:
-  - /_shared/btns/popup-btn.md
+  - /_shared/btns/more.md
 secondarySlider:
   - secondary-slider.md
 isLeft: true
+extraText:
+  - hiddenText.md
+id: forest-extra
+extraBtnText: Подробнее
 ---
 
 # LEO **ECO** FOREST RESORT

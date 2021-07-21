@@ -20,6 +20,7 @@ const Subscribe = (props) => {
     emailPlaceholder,
     email_error,
     formId,
+    success,
   } = props;
 
   return (
@@ -28,8 +29,10 @@ const Subscribe = (props) => {
         src={handleUrl(image, _relativeURL, _ID)}
         customClassName="subscribe-bg"
       />
-      {/* {success} */}
+
       <form className={`${formId} subscribe-form`}>
+        {success}
+        <div className="subscribe-overlay"></div>
         <div className="subscribe-form-body">{_body}</div>
 
         <div className="subscribe-form-flex flex-start">
@@ -53,7 +56,6 @@ const Subscribe = (props) => {
               {btn}
             </button>
             <Loader customClassName="subscribe-loader" />
-            <h5 className="subscribe-success-text">Thank you!</h5>
           </div>
         </div>
       </form>

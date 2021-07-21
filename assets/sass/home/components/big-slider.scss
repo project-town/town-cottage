@@ -8,6 +8,11 @@
   &-left {
     .big-slider-body {
       left: 100px;
+      .btn {
+        img {
+          margin-right: auto;
+        }
+      }
     }
     .splide__arrows {
       right: 100px;
@@ -24,9 +29,22 @@
   &-right {
     .big-slider-body {
       right: 100px;
+      .read-more-hidden {
+        margin-left: auto;
+      }
+      .btn {
+        img {
+          margin-left: auto;
+        }
+      }
     }
     .splide__arrows {
       left: 100px;
+      &-extra {
+        img {
+          margin-right: auto;
+        }
+      }
     }
     .boxes {
       left: 262px;
@@ -54,13 +72,13 @@
   }
   .arrows {
     position: absolute;
-    top: 500px;
+    top: 550px;
     bottom: auto;
   }
   .big-slider {
     overflow: hidden;
     position: relative;
-    height: 600px;
+    height: 650px;
 
     &-overlay {
       position: absolute;
@@ -143,8 +161,14 @@
     &-body {
       z-index: 999;
       position: absolute;
+      &-extra {
+        display: none;
+      }
       .btn {
         margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .text-p {
         max-width: 620px;

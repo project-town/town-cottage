@@ -36,6 +36,11 @@ const closePopupEvent = () => {
   addEvent(closeBtn, "click", hidePopup);
   const overlay = getElement(".contact-overlay");
   addEvent(overlay, "click", hidePopup);
+
+  const successBtns = getElements(".hide-success");
+  successBtns.forEach((btn) => {
+    addEvent(btn, "click", hidePopup);
+  });
 };
 
 const showPopupEvent = () => {
@@ -52,8 +57,12 @@ const showPopup = () => {
 
 const hidePopup = () => {
   const popup = getElement(".contact");
-
   popup.classList.remove("contact-active");
+  popup.classList.remove("contact-submitted");
+  const subscribeContainers = getElements(".subscribe-form");
+  subscribeContainers.forEach((e) => {
+    e.classList.remove("subscribe-submitted");
+  });
 };
 
 const handleBlur = (e) => {

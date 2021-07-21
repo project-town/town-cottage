@@ -12,6 +12,9 @@ function BigSlider({
   callBtn,
   secondarySlider,
   isLeft,
+  extraText,
+  id,
+  extraBtnText,
 }) {
   return (
     <div
@@ -21,7 +24,17 @@ function BigSlider({
     >
       <div className="big-slider-body">
         {_body}
-        {callBtn}
+        <div className={`${id} big-slider-body-extra`}>{extraText}</div>
+        {id ? (
+          <button className="btn read-more" data-id={id}>
+            <p>{extraBtnText}</p>
+            <Img
+              src={handleUrl(images.common.arrowTopOrange, _relativeURL, _ID)}
+            />
+          </button>
+        ) : (
+          callBtn
+        )}
       </div>
       <div className="big-slider">
         <section className="big-slider-overlay"></section>

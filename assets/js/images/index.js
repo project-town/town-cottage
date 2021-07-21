@@ -19,6 +19,9 @@ const images = {
     logo: "assets/images/common/logo.svg",
     arrowBottomOrange: "assets/images/common/arrow-bottom-orange.svg",
     arrowBottomWhite: "assets/images/common/arrow-bottom-white.svg",
+    arrowTopOrange: "assets/images/common/arrow-top-orange.svg",
+    closeWhite: "assets/images/common/close-white.svg",
+    hamburger: "assets/images/common/hamburger.svg",
   },
 };
 

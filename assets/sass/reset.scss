@@ -159,3 +159,7 @@ body {
 .splide--nav > .splide__track > .splide__list > .splide__slide.is-active {
   border: none;
 }
+
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}

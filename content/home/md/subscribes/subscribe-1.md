@@ -12,6 +12,8 @@ emailPlaceholder: "@gmail.com"
 email_error: Invalid email
 btn: Заказать звонок
 formId: form-1
+success:
+  - /_shared/success/index.md
 ---
 
 ## ХОЧЕШЬ ПОЛУЧИТЬ ПОДРОБНУЮ
