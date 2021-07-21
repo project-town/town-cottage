@@ -30,3 +30,5 @@ jobs:
         run: npm install
       - name: Run a one-line script
         run: npm run build
+       name: Deploy to gh-pages branch
+        run: gh-pages -d site
