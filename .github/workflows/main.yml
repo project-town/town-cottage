@@ -25,7 +25,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: install cuttlebelle
-        run: sudo apt-get install cuttlebelle
+        run: sudo apt-get install -g cuttlebelle
       - name: install dependencies
         run: npm install
       - name: Run a one-line script
