@@ -30,6 +30,10 @@ jobs:
         run: npm install
       - name: Run a one-line script
         run: npm run build
+      - name: indentify email
+        run: git config --global user.email "denis.b651@gmail.com"
+      - name: indentify name
+        run: git config --global user.name "denis6421"
       - name: install gh-pages
         run: sudo npm  install -g gh-pages
       - name: Deploy to gh-pages branch
