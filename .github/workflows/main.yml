@@ -1,29 +1,29 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Build and Deploy
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - uses: actions/labeler@v2
-        with:
-          repo-token: ${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}
-      # Runs a single command using the runners shell
-      - name: install cuttlebelle
-        run: sudo npm  install -g cuttlebelle
-      - name: install dependencies
-        run: npm install
-      - name: Run a one-line script
-        run: npm run build
-      - name: install gh-pages
-        run: sudo npm  install -g gh-pages
-      - name: Deploy to gh-pages branch
-        run: gh-pages -d site
+      steps:
+        - name: Checkout 🛎️
+          uses: actions/checkout@v2.3.1
+        # Runs a single command using the runners shell
+        - name: install cuttlebelle
+          run: sudo npm  install -g cuttlebelle
+        - name: install dependencies
+          run: npm install
+        - name: Run a one-line script
+          run: npm run build
+        - name: Deploy 🚀
+          uses: JamesIves/github-pages-deploy-action@4.1.4
+          with:
+            branch: gh-pages # The branch the action should deploy to.
+            folder: side # The folder the action should deploy.
