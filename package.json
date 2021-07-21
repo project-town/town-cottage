@@ -7,7 +7,8 @@
     "build": "cuttlebelle",
     "sass-prebuild": "node-sass ./assets/sass/index.scss ./assets/css/index.css",
     "watch-sass": "node-sass -w ./assets/sass/index.scss ./assets/css/index.css",
-    "watch": "yarn watch-sass &  cuttlebelle -w"
+    "watch": "yarn watch-sass &  cuttlebelle -w",
+    "deploy": "gh-pages -d site"
   },
   "cuttlebelle": {
     "site": {
@@ -18,7 +19,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@splidejs/react-splide": "^0.4.4"
+    "@splidejs/react-splide": "^0.4.4",
+    "gh-pages": "^3.2.3"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.13.0",

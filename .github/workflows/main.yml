@@ -22,7 +22,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      - uses: actions/labeler@v2
+        with:
+          repo-token: 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
       # Runs a single command using the runners shell
       - name: install cuttlebelle
         run: sudo npm  install -g cuttlebelle
@@ -30,10 +32,8 @@ jobs:
         run: npm install
       - name: Run a one-line script
         run: npm run build
-      - name: indentify email
+      - name: indentify
         run: git config --global user.email denis.b651@gmail.com
-      - name: indentify name
-        run: git config --global user.name denis6421
       - name: install gh-pages
         run: sudo npm  install -g gh-pages
       - name: Deploy to gh-pages branch
