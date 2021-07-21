@@ -25,6 +25,13 @@ export const gridSectionSlider = (name, isSecondary) => {
     arrows: false,
     speed: 300,
     gap: 15,
+    breakpoints: {
+      700: {
+        fixedWidth: 125,
+        gap: 10,
+        height: 95,
+      },
+    },
     focus: "center",
     pagination: false,
     cover: true,
@@ -67,6 +74,13 @@ const createBigSlider = (name, isSecondary) => {
     isNavigation: true,
     fixedWidth: 345,
     gap: 15,
+    breakpoints: {
+      700: {
+        fixedWidth: 300,
+        gap: 10,
+        height: 180,
+      },
+    },
     focus: "center",
     pagination: false,
     cover: true,
@@ -87,7 +101,6 @@ export const initSliders = () => {
   createLocationSlider();
   createConceptSlider();
   gridSectionSlider("infrastructure", true);
-  gridSectionSlider("building");
   createHeaderSlider();
   createVillageSlider();
   createForestSlider();

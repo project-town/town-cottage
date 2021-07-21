@@ -114,3 +114,14 @@ h2 {
     color: #7e8d1f;
   }
 }
+.splide__slide {
+  img {
+    object-position: center;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: $mobile) {
+  .screen {
+    width: 100%;
+  }
+}

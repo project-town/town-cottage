@@ -57,11 +57,11 @@ function FullPlan({
               <p>{familyText}</p>
             </span>
             <span>
-              <Img src={handleUrl(images.plans.badroom, _relativeURL, _ID)} />
+              <Img src={handleUrl(images.plans.badroom2, _relativeURL, _ID)} />
               <p>{bedroomsText}</p>
             </span>
             <span>
-              <Img src={handleUrl(images.plans.bathroom, _relativeURL, _ID)} />
+              <Img src={handleUrl(images.plans.bathroom2, _relativeURL, _ID)} />
               <p>{bathroomText}</p>
             </span>
           </section>

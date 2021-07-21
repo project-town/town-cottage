@@ -1,7 +1,7 @@
 ---
 layout: screens/home/components/grid-section/index
-slider:
-  - slider/index.md
+video:
+  - video/index.md
 callBtn:
   - /_shared/btns/popup-btn.md
 isLeft: true

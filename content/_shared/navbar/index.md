@@ -1,5 +1,6 @@
 ---
 layout: common/navbar/index
+
 links:
   - name: Концепция
     value: Концепция
@@ -14,4 +15,12 @@ links:
   - name: Контакты
     value: Контакты
 number: +38050 000 0000
+languages:
+  - language/index.md
 ---
+
+Leo
+
+Eco
+
+Village

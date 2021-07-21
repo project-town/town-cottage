@@ -1,9 +1,16 @@
 import React from "react";
 
-const GridSection = ({ slider, _body, secondarySlider, isLeft, callBtn }) => {
+const GridSection = ({
+  slider,
+  _body,
+  secondarySlider,
+  isLeft,
+  callBtn,
+  video,
+}) => {
   return (
     <div className={`grid-section grid-section-${isLeft ? "left" : "right"}`}>
-      {slider}
+      {video ? video : slider}
       <div className="grid-section-content">
         <div className="grid-section-content-body">
           {_body} {callBtn}

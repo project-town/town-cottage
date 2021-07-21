@@ -1,24 +1,24 @@
 import { getElement } from "./common/index.js";
 import contact from "./contact/index.js";
-import {
-  handleNavbarBackground,
-  handleNavbarTransform,
-} from "./navbar/index.js";
+import navbar from "./navbar/index.js";
 import subscribe from "./subscribe/index.js";
+import video from "./video/index.js";
 
 export const init = () => {
   subscribe.addEvents();
   contact.addEvents();
-  const navbar = getElement(".navbar");
-  handleOnScroll(navbar);
+  const navbarElement = getElement(".navbar");
+  handleOnScroll(navbarElement);
+  navbar.init();
+  video.makeVideoPlay();
 };
 
-const handleOnScroll = (navbar) => {
+const handleOnScroll = (navbarElement) => {
   document.addEventListener(
     "scroll",
     () => {
-      handleNavbarBackground(navbar);
-      handleNavbarTransform(navbar);
+      navbar.handleNavbarBackground(navbarElement);
+      navbar.handleNavbarTransform(navbarElement);
     },
     { passive: true }
   );

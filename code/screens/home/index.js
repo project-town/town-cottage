@@ -18,6 +18,7 @@ const Home = ({
 }) => {
   return (
     <div className="screen home">
+      <div className="indicator home-indicator" id="#"></div>
       {header}
       {concept}
       {location}

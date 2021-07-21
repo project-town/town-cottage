@@ -2,6 +2,9 @@
   .splide--nav > .splide__track > .splide__list > .splide__slide.is-active {
     border: none;
   }
+  .big-slider-body {
+    padding-top: 80px;
+  }
   &-left {
     .big-slider-body {
       left: 100px;
@@ -49,9 +52,16 @@
       cursor: pointer;
     }
   }
+  .arrows {
+    position: absolute;
+    top: 500px;
+    bottom: auto;
+  }
   .big-slider {
     overflow: hidden;
     position: relative;
+    height: 600px;
+
     &-overlay {
       position: absolute;
       left: 0px;
@@ -147,7 +157,7 @@
         text-transform: uppercase;
         border-top: 1px solid white;
         color: white;
-        font-size: 64px;
+        font-size: 48px;
         font-weight: bold;
         &:first-of-type {
           strong {
@@ -156,6 +166,93 @@
         }
       }
       h2 {
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .big-slider {
+    &-wrapper {
+      .arrows {
+        top: auto;
+        bottom: 135px !important;
+        background: transparent !important;
+        min-width: 100%;
+        left: 0px;
+        max-height: 0px;
+        right: auto;
+      }
+      .splide__arrow {
+        position: absolute !important;
+        width: 37px !important;
+        height: 69px !important;
+        background: rgba(255, 255, 255, 0.8) !important;
+        &--prev {
+          left: 0px;
+        }
+        &--next {
+          right: 0px;
+        }
+      }
+      &-left {
+        .big-slider-body {
+          left: 0;
+        }
+      }
+      &-right {
+        .big-slider-body {
+          left: 0;
+          right: auto;
+        }
+      }
+      .big-slider {
+        height: 600px;
+        .splide__arrows {
+          display: none;
+        }
+        .boxes {
+          height: 75px;
+          left: 0px;
+          right: 0px;
+          .box {
+            align-items: flex-start;
+            min-width: auto;
+            &-title {
+              font-size: 18px;
+              padding-top: 21px;
+            }
+            &-body {
+              padding-top: 25px;
+              .text-p {
+                line-height: 93.19%;
+                font-size: 14px;
+              }
+            }
+            width: 50%;
+            &:nth-child(3) {
+              display: none;
+            }
+          }
+        }
+      }
+      .big-slider-body {
+        padding-left: 15px;
+        padding-right: 15px;
+        h1 {
+          padding-top: 12px;
+          font-size: 24px;
+          line-height: 93.19%;
+          margin-bottom: 17px;
+        }
+        h2 {
+          font-size: 24px;
+          line-height: 110%;
+        }
+        .text-p {
+          font-size: 16px;
+          line-height: 21px;
+        }
       }
     }
   }

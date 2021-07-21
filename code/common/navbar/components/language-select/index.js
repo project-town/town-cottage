@@ -1,18 +1,31 @@
 import React from "react";
+import images from "../../../../../assets/js/images";
+import { handleUrl } from "../../../../utils/url";
+import Img from "../../../img/Img";
 
-const LanguageSelect = ({ current, available_languages }) => {
+const LanguageSelect = ({
+  selected,
+  optionName,
+  optionUrl,
+  _relativeURL,
+  _ID,
+}) => {
   return (
-    <div className="navbar-languages">
-      <section className="navbar-languages-current">{current}</section>
-      <ul className="navbar-languages-available">
-        {available_languages.map(({ name, url }) => {
-          return (
-            <li>
-              <a href={url}>{name}</a>
-            </li>
-          );
-        })}
-      </ul>
+    <div className="navbar-language">
+      <section className="navbar-language-selected">
+        <h5>{selected}</h5>
+        <Img
+          src={handleUrl(images.common.arrowBottomOrange, _relativeURL, _ID)}
+          customClassName="navbar-language-orange"
+        />
+        <Img
+          src={handleUrl(images.common.arrowBottomWhite, _relativeURL, _ID)}
+          customClassName="navbar-language-white"
+        />
+      </section>
+      <section className="navbar-language-option">
+        <a href={optionUrl}>{optionName}</a>
+      </section>
     </div>
   );
 };

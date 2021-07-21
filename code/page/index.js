@@ -12,6 +12,8 @@ const Page = ({ title, navbar, footer, script, _relativeURL, _ID, main }) => {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
         ></link>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <link rel="stylesheet" href={generateUrl(`/assets/css/index.css`)} />
       </head>
       <body>

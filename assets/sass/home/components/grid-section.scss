@@ -1,0 +1,205 @@
+.grid-section {
+  height: 700px;
+  display: flex;
+  justify-content: space-between;
+  .video-container {
+    width: 780px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    .video {
+      position: absolute;
+      z-index: 0;
+      background-size: 100% 100%;
+      top: 50%;
+      left: 50%; /* fixed to left. Replace it by right if you want.*/
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      &-actions-btn {
+        position: absolute;
+        top: 50%;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.2s all;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+    }
+    &:hover {
+      .video-actions-btn {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+  &-right {
+    .arrows {
+      right: auto;
+      left: 0px;
+    }
+    .secondary-slider {
+      margin-right: auto;
+    }
+    .grid-section-content {
+      order: 1;
+      &-body {
+        padding-right: 60px;
+        padding-left: 100px;
+      }
+    }
+    .simple-slider {
+      order: 2;
+    }
+  }
+  &-left {
+    .grid-section-content {
+      &-body {
+        padding-left: 60px;
+        padding-right: 100px;
+      }
+    }
+  }
+  .simple-slider {
+    width: 780px;
+    position: relative;
+    .splide__list,
+    .splide__track {
+      height: 100%;
+    }
+    .splide__slide {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &-content {
+    padding-top: 110px;
+    width: calc(100% - 780px);
+    display: flex;
+    flex-direction: column;
+    h2 {
+      text-transform: uppercase;
+      font-size: 48px;
+      line-height: 44.73px;
+      font-weight: 700;
+      width: fit-content;
+      padding-top: 10px;
+      &:first-of-type {
+        border-top: 1px solid #565656;
+        color: #565656;
+      }
+      strong {
+        color: #7e8d1f;
+      }
+    }
+    &-body {
+      .text-p {
+        margin-top: 25px;
+        color: #565656;
+        strong {
+          color: #565656;
+          font-weight: 700;
+        }
+      }
+    }
+    .btn {
+      margin-top: 40px;
+    }
+    .secondary-slider {
+      margin-top: auto;
+      position: static;
+      width: 100%;
+      overflow: hidden;
+      .splide__list {
+        display: flex;
+        overflow: hidden;
+        .splide__slide {
+          cursor: pointer;
+          .overlay {
+            background: linear-gradient(
+              0deg,
+              rgba(255, 255, 255, 0.35),
+              rgba(255, 255, 255, 0.35)
+            );
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+          }
+          width: 100px;
+          height: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .grid-section {
+    height: auto;
+    flex-direction: column;
+    .splide__arrows {
+      width: 70px !important;
+      height: 50px !important;
+      img {
+        width: 10px;
+      }
+    }
+    .secondary-slider {
+      order: 1;
+    }
+    .simple-slider {
+      width: 100%;
+      order: 1 !important;
+      height: 318px;
+    }
+    &-content {
+      padding-top: 10px;
+      order: 2 !important;
+      width: 100%;
+      &-body {
+        padding-left: 10px;
+        padding-right: 10px;
+        order: 2;
+        margin-top: 40px;
+      }
+      .text-p {
+        margin-top: 15px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      h2 {
+        font-size: 24px;
+        display: inline;
+        margin-right: 5px;
+      }
+    }
+    &-left {
+      .grid-section-content-body {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+    &-right {
+      .grid-section-content-body {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
