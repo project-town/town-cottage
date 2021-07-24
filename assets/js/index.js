@@ -39,6 +39,7 @@ export const init = () => {
   navbar.init();
   video.makeVideoPlay();
   readMoreBtnsEvent();
+  AOS.init();
 };
 
 const handleOnScroll = (navbarElement) => {
