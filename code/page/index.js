@@ -8,6 +8,12 @@ const Page = ({ title, navbar, footer, script, _relativeURL, _ID, main }) => {
     <html>
       <head>
         <title>{title}</title>
+
+        <link
+          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+          rel="stylesheet"
+        />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
