@@ -1,0 +1,159 @@
+.contact {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.2s all;
+  pointer-events: none;
+
+  &-active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &-overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background: black;
+    opacity: 0.6;
+    height: 100%;
+  }
+  &-submitted {
+    .success {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .contact-form {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  &-form {
+    transition: 0.2s all;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 20vh;
+    max-width: 525px;
+    width: 100%;
+    height: 590px;
+    background: #fffcf0;
+    padding: 30px 30px 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-submit {
+      position: relative;
+      height: 60px;
+      margin-top: auto;
+      &-loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        &-active {
+          display: block;
+        }
+      }
+
+      &-btn {
+        margin-top: 0px !important;
+        border: none;
+        cursor: pointer;
+        height: 100%;
+      }
+    }
+    &-close {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+    }
+
+    &-text {
+      margin-top: 5px;
+      font-size: 18px;
+      color: #565656;
+      text-align: center;
+      max-width: 300px;
+    }
+    h2 {
+      font-size: 20px;
+      line-height: 23px;
+      color: #565656;
+      &:first-of-type {
+        width: fit-content;
+        padding-top: 7px;
+        border-top: 1px solid #565656;
+      }
+    }
+
+    &-sections {
+      margin-top: 20px;
+      width: 250px;
+      section {
+        position: relative;
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+      h4 {
+        font-size: 14px;
+        font-weight: 400;
+        color: #565656;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 12px;
+        position: absolute;
+        top: calc(100% - 1px);
+        display: none;
+      }
+      input {
+        text-indent: 15px;
+        width: 100%;
+        height: 60px;
+        border: 1px solid #565656;
+        background: transparent;
+        color: #565656;
+        font-size: 18px;
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .contact {
+    &-form {
+      height: auto;
+      padding: 30px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      &-submit {
+        margin-top: 30px;
+      }
+      .btn {
+        width: 270px;
+      }
+      &-sections {
+        width: 270px;
+      }
+      h2 {
+        font-size: 20px;
+        line-height: 23.46px;
+        text-align: center;
+      }
+    }
+  }
+}

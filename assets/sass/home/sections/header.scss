@@ -1,0 +1,29 @@
+.header {
+  .big-slider {
+    &-body {
+      height: 770px;
+      padding-top: 194px;
+      h1 {
+        font-size: 64px;
+        line-height: 93.19%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .header {
+    .big-slider-wrapper {
+      .big-slider {
+        &-body {
+          height: 640px;
+          padding-top: 150px;
+          h1 {
+            font-size: 36px;
+          }
+        }
+      }
+    }
+  }
+}

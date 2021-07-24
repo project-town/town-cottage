@@ -1,0 +1,52 @@
+@import "./sections/plans.scss";
+@import "./components/big-slider.scss";
+@import "./components/grid-section.scss";
+@import "./sections/header.scss";
+@import "./sections/images-section.scss";
+@import "./sections/contact.scss";
+@import "./sections/map.scss";
+
+.home {
+  .section {
+    position: relative;
+    padding-top: 100px;
+    .indicator {
+      position: absolute;
+      top: 30px;
+    }
+  }
+
+  .arrows {
+    position: absolute;
+
+    width: 162px;
+    background: rgba(255, 255, 255, 0.8);
+    height: 100px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    .splide__arrow {
+      transform: none;
+      position: static;
+      width: 50%;
+      height: 100%;
+      background: transparent;
+      border-radius: 0px;
+    }
+  }
+  .infrastructure {
+    .grid-section {
+      &-content {
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .home {
+    .section {
+      padding-top: 50px;
+    }
+  }
+}
