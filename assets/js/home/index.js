@@ -4,6 +4,7 @@ import {
   getElement,
   getElementAttribute,
   getElements,
+  toggleBodyOverflow,
 } from "../common/index.js";
 
 import { init } from "../index.js";
@@ -14,6 +15,7 @@ window.onload = () => {
   initSliders();
   showPlan();
   closeEvents();
+  toggleMobilePlanView();
 };
 
 const closeEvents = () => {
@@ -25,6 +27,7 @@ const closeEvents = () => {
 
 const hidePlan = () => {
   const plans = getElements(".full-plan");
+  toggleBodyOverflow();
   plans.forEach((plan) => {
     plan.classList.remove("full-plan-active");
   });
@@ -32,13 +35,35 @@ const hidePlan = () => {
 
 const showPlan = () => {
   const plans = getElements(".plan");
+
   plans.forEach((plan) => {
     console.log("plan");
     addEvent(plan, "click", () => {
+      toggleBodyOverflow(true);
       const id = getElementAttribute(plan, "data-id");
-      const full = document.querySelector(`.${id}`);
-      console.log(full);
-      full.classList.add("full-plan-active");
+      const full = getElements(`.${id}`);
+      full.forEach((element) => {
+        element.classList.add("full-plan-active");
+      });
+    });
+  });
+};
+
+const toggleMobilePlanView = () => {
+  const selectionBtns = getElements(".full-mobile-plan-selector");
+
+  const allViews = getElements(".plan-view");
+  selectionBtns.forEach((btn) => {
+    const id = getElementAttribute(btn, "data-id");
+    addEvent(btn, "click", () => {
+      allViews.forEach((view) => {
+        console.log(view);
+        if (view.classList.contains(id)) {
+          view.style.display = "block";
+        } else {
+          view.style.display = "none";
+        }
+      });
     });
   });
 };

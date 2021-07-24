@@ -5,11 +5,11 @@ namePlaceholder: Александр
 phoneLabel: Номер телефона
 phonePlaceholder: +38050 000 00 00
 image: /assets/images/subscribe/bg.png
-name_error: Required field
-phone_error: Invalid phone
+name_error: Обязательное поле
+phone_error: Обязательное поле
 emailLabel: E-mail
 emailPlaceholder: "@gmail.com"
-email_error: Invalid email
+email_error: Неверный адрес электронной почты
 btn: Заказать звонок
 formId: form-1
 success:

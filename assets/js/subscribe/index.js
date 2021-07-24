@@ -1,5 +1,11 @@
 import api from "../services/api.js";
-import { addEvent, getElement, getElements } from "../common/index.js";
+import {
+  addEvent,
+  getElement,
+  getElementAttribute,
+  getElements,
+} from "../common/index.js";
+import { inputValidation } from "../common/form-validation.js";
 
 const addEvents = () => {
   const ids = [".form-1", ".form-2", ".form-3"];
@@ -14,7 +20,7 @@ const addEvents = () => {
       input.addEventListener(
         "blur",
         (e) => {
-          handleBlur(e, id);
+          handleBlur(input, id);
         },
         { passive: true }
       );
@@ -29,10 +35,10 @@ const addEvents = () => {
   });
 };
 
-const handleBlur = (e, id) => {
-  const name = e.target.name;
-  const value = e.target.value;
-  if (!value) {
+const handleBlur = (input, id) => {
+  const name = getElementAttribute(input, "name");
+  const isError = inputValidation(input);
+  if (isError) {
     handleError(name, true, id);
   }
 };
@@ -60,14 +66,18 @@ const hadleSubmit = async (e, id) => {
   e.preventDefault();
   const inputs = getElements(`${id} .subscribe-form-section input`);
   const body = {};
+  const errors = [];
   inputs.forEach((input) => {
-    const name = input.name;
-    const value = input.value;
-    if (!value) {
+    const isError = inputValidation(input);
+    const name = getElementAttribute(input, "name");
+    if (isError) {
+      errors.push(true);
       return handleError(name, true, id);
     }
-    body[name] = value;
+    body[name] = input.value;
   });
+
+  if (errors.length > 0) return;
 
   const { name, phone } = body;
   if (!phone || !name) return;

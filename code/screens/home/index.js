@@ -17,7 +17,7 @@ const Home = ({
   contact,
 }) => {
   return (
-    <div className="screen home">
+    <div className="home screen">
       <div className="indicator home-indicator" id="#"></div>
       {header}
       {concept}

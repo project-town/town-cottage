@@ -48,16 +48,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &-submit {
+      position: relative;
+      height: 60px;
+      margin-top: auto;
+      &-loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        &-active {
+          display: block;
+        }
+      }
+
+      &-btn {
+        margin-top: 0px !important;
+        border: none;
+        cursor: pointer;
+        height: 100%;
+      }
+    }
     &-close {
       position: absolute;
       right: 8px;
       top: 8px;
     }
-    .btn {
-      margin-top: auto;
-      border: none;
-      cursor: pointer;
-    }
+
     &-text {
       margin-top: 5px;
       font-size: 18px;
@@ -118,12 +137,14 @@
   .contact {
     &-form {
       height: auto;
-      padding: 20px;
+      padding: 30px;
       top: 50%;
       transform: translate(-50%, -50%);
+      &-submit {
+        margin-top: 30px;
+      }
       .btn {
         width: 270px;
-        margin-top: 30px;
       }
       &-sections {
         width: 270px;

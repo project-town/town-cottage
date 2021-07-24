@@ -143,6 +143,7 @@ button {
 
 html {
   scroll-behavior: smooth;
+  --webkit--scroll-behavior: smooth;
 }
 
 body {
@@ -152,6 +153,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  -webkit-overflow-scrolling: touch;
 }
 .splide__slide {
   border: none !important;
@@ -162,4 +164,15 @@ body {
 
 .disable-dbl-tap-zoom {
   touch-action: manipulation;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

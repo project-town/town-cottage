@@ -1,4 +1,7 @@
 .plans {
+  .full-plan-mobile {
+    display: none;
+  }
   h2 {
     margin-left: auto;
     width: fit-content;
@@ -15,12 +18,16 @@
       color: #7e8d1f;
     }
   }
+  .arrows {
+    right: 0px;
+  }
   &-list {
     display: flex;
     padding-top: 30px;
     justify-content: space-between;
 
     .plan {
+      cursor: pointer;
       width: calc(100% / 3 - 1px);
       background: rgba(126, 141, 31, 0.6);
       padding: 10px;
@@ -236,6 +243,7 @@
       .arrows {
         width: 70px;
         height: 43px;
+        bottom: 0px;
         img {
           width: 15px;
           height: 15px;
@@ -281,6 +289,148 @@
 
 @media only screen and (max-width: $mobile) {
   .plans {
+    h2 {
+      font-size: 24px;
+      line-height: 100%;
+    }
+    .full-plan {
+      display: none;
+    }
+    .full-plan-mobile {
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      z-index: 999999;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      * {
+        color: rgba(0, 0, 0, 0.6);
+      }
+      &-selectors {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .full-mobile-plan-selector {
+          font-size: 16px;
+          padding-bottom: 5px;
+          border-bottom: 2px solid #a0b428;
+          &:first-child {
+            padding-right: 20px;
+          }
+        }
+      }
+      &-content {
+        overflow-x: hidden;
+        background: #fffcf0;
+
+        height: calc(100% - 100px);
+
+        position: relative;
+        width: calc(100% - 20px);
+
+        z-index: 99;
+        flex-direction: column;
+        display: flex;
+        .full-plan-slider {
+          width: 100%;
+          min-height: 270px;
+          height: 60vw;
+        }
+        .full-plan-close {
+          z-index: 99999;
+          position: fixed;
+          top: 60px;
+          right: 30px;
+        }
+        &-bottom {
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-bottom: 150px;
+          display: flex;
+          flex-direction: column;
+          &-body {
+            .text-p {
+              color: #565656;
+              font-size: 16px;
+              line-height: 19px;
+            }
+          }
+          &-details {
+            li {
+              margin-bottom: 10px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              &:last-child {
+                margin-bottom: 0px;
+              }
+              span {
+                display: flex;
+                align-items: center;
+                p {
+                  &:last-child {
+                    margin-left: 4px;
+                  }
+                }
+              }
+              h4 {
+                font-size: 16px;
+                color: rgba(0, 0, 0, 0.6);
+                font-weight: 500;
+              }
+              p {
+                font-size: 16px;
+                color: rgba(0, 0, 0, 0.6);
+              }
+            }
+          }
+          .btn {
+            margin-top: 20px;
+          }
+          &-title {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            align-items: center;
+            padding-right: 15px;
+            h2 {
+              font-size: 24px;
+              margin-left: 0px;
+              margin-right: 0px;
+            }
+            h5 {
+              font-size: 18px;
+              color: #7e8d1f;
+              padding-top: 20px;
+            }
+          }
+          &-images {
+            padding-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+
+            span {
+              display: flex;
+              align-items: center;
+              width: 50%;
+              p {
+                font-size: 14px;
+                margin-left: 10px;
+              }
+              &:last-of-type {
+                margin-top: 13px;
+              }
+            }
+          }
+          &-selected {
+            flex: 1;
+            overflow: auto;
+          }
+        }
+      }
+    }
     &-list {
       flex-direction: column;
       .plan {

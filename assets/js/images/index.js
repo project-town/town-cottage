@@ -22,6 +22,11 @@ const images = {
     arrowTopOrange: "assets/images/common/arrow-top-orange.svg",
     closeWhite: "assets/images/common/close-white.svg",
     hamburger: "assets/images/common/hamburger.svg",
+    socials: {
+      youtube: "assets/images/common/socials/youtube.svg",
+      facebook: "assets/images/common/socials/facebook.svg",
+      instagram: "assets/images/common/socials/instagram.svg",
+    },
   },
 };
 

@@ -11,18 +11,22 @@ export const gridSectionSlider = (name, isSecondary) => {
     type: "fade",
     rewind: true,
     pagination: false,
+    cover: true,
+    arrow: false,
   });
   if (!isSecondary) {
     return primarySlider.mount();
   }
   const secondarySlider = new Splide(`.${name} .secondary-slider`, {
-    rewind: false,
+    rewind: true,
     type: "loop",
     fixedWidth: 200,
     fixedHeight: 150,
     perPage: 3,
     isNavigation: true,
+    pagination: false,
     arrows: false,
+    cover: true,
     speed: 300,
     gap: 15,
     breakpoints: {

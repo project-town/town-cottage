@@ -2,16 +2,20 @@ import React from "react";
 import images from "../../../assets/js/images";
 import { handleUrl } from "../../utils/url";
 import Img from "../img/Img";
+import Loader from "../loaders/loader";
 
 function ContactForm({
   _body,
   text,
   section_1_label,
   section_1_placeholder,
+  section_1_error,
   section_2_label,
   section_2_placeholder,
+  section_2_error,
   section_3_label,
   section_3_placeholder,
+  section_3_error,
   submitText,
   _relativeURL,
   _ID,
@@ -36,7 +40,7 @@ function ContactForm({
               name="contactName"
               className="contact-form-input"
             />
-            <p className="contactName-error">Required field</p>
+            <p className="contactName-error">{section_1_error}</p>
           </section>
 
           <section>
@@ -45,26 +49,32 @@ function ContactForm({
               data-required="1"
               placeholder={section_2_placeholder}
               name="contactPhone"
+              type="number"
+              data-type="phone"
               className="contact-form-input"
             />
-            <p className="contactPhone-error">Required field</p>
+            <p className="contactPhone-error">{section_2_error}</p>
           </section>
           <section>
             <h4>{section_3_label}</h4>
             <input
+              data-type="email"
               data-required="1"
               placeholder={section_3_placeholder}
               name="contactEmail"
               className="contact-form-input"
             />
-            <p className="contactEmail-error">Required field</p>
+            <p className="contactEmail-error">{section_3_error}</p>
           </section>
         </div>
-        <input
-          className="contact-form-submit btn"
-          type="submit"
-          value={submitText}
-        ></input>
+        <div className="contact-form-submit">
+          <Loader customClassName="contact-form-submit-loader" />
+          <input
+            className="contact-form-submit-btn btn"
+            type="submit"
+            value={submitText}
+          ></input>
+        </div>
       </form>
     </div>
   );

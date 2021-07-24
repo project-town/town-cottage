@@ -3,7 +3,7 @@ import images from "../../../../../../assets/js/images";
 import Img from "../../../../../common/img/Img";
 import { handleUrl } from "../../../../../utils/url";
 import FullPlan from "./full-plan";
-
+import FullPlanMobile from "./full-plan-mobile";
 function plan(props) {
   const {
     title,
@@ -38,7 +38,7 @@ function plan(props) {
         <div className="plan-details">
           <section className="plan-details-top">
             <h5>{title}</h5>
-            <h5>{`${meters} м²`}</h5>
+            <h5>{meters}</h5>
           </section>
           <section className="plan-details-bottom">
             <span>
@@ -56,6 +56,7 @@ function plan(props) {
         </figure>
       </div>
       <FullPlan {...props} />
+      <FullPlanMobile {...props} />
     </>
   );
 }

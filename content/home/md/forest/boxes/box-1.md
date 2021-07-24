@@ -1,6 +1,6 @@
 ---
 layout: screens/home/components/big-slider/box
-title: 24-26 домов
+title: 24-26
 ---
 
-на територии
+домов на територии

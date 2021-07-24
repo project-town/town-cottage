@@ -4,20 +4,20 @@
 @import "./sections/header.scss";
 @import "./sections/images-section.scss";
 @import "./sections/contact.scss";
+@import "./sections/map.scss";
 
 .home {
   .section {
-    margin-top: 100px;
     position: relative;
+    padding-top: 100px;
     .indicator {
       position: absolute;
-      top: -110px;
+      top: 30px;
     }
   }
 
   .arrows {
     position: absolute;
-    bottom: 0px;
 
     width: 162px;
     background: rgba(255, 255, 255, 0.8);
@@ -41,55 +41,12 @@
       }
     }
   }
-
-  .map {
-    position: relative;
-    height: 560px;
-    padding-top: 130px;
-    padding-left: 100px;
-    &-text {
-      position: relative;
-      .btn {
-        margin-top: 30px;
-      }
-      h2 {
-        font-size: 48px;
-        margin-bottom: 25px;
-      }
-      h4 {
-        font-size: 18px;
-        line-height: 25px;
-        font-weight: bold;
-        max-width: 300px;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        color: white;
-      }
-      .text-p {
-        margin-bottom: 10px;
-        color: white;
-      }
-    }
-    &-bg {
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
 }
 
 @media only screen and (max-width: $mobile) {
   .home {
     .section {
-      margin-top: 50px;
+      padding-top: 50px;
     }
   }
 }

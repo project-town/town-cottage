@@ -1,6 +1,7 @@
 ---
 layout: common/navbar/index
-
+socials:
+  - /_shared/socials/index.md
 links:
   - name: Концепция
     value: Концепция

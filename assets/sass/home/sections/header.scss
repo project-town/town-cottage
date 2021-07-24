@@ -1,7 +1,7 @@
 .header {
   .big-slider {
-    height: 770px;
     &-body {
+      height: 770px;
       padding-top: 194px;
       h1 {
         font-size: 64px;
@@ -15,17 +15,13 @@
 @media only screen and (max-width: $mobile) {
   .header {
     .big-slider-wrapper {
-      height: 640px;
       .big-slider {
-        height: 100%;
         &-body {
+          height: 640px;
           padding-top: 150px;
           h1 {
             font-size: 36px;
           }
-        }
-        .splide__list {
-          height: calc(100% - 75px);
         }
       }
     }

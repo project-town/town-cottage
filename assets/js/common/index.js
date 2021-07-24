@@ -26,7 +26,8 @@ export const addEvent = (element, eventType, customEvent) => {
 
 export const toggleBodyOverflow = (val) => {
   if (val) {
-    return (document.body.style.overflow = "hidden");
+    document.body.classList.add("lock");
+  } else {
+    document.body.classList.remove("lock");
   }
-  document.body.style.overflow = "auto";
 };

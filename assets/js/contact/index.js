@@ -6,6 +6,7 @@ import {
   getElementAttribute,
   getElements,
 } from "../common/index.js";
+import { inputValidation } from "../common/form-validation.js";
 
 const addEvents = () => {
   const btns = getElements(".popup-btn");
@@ -21,10 +22,7 @@ const addEvents = () => {
   });
   const inputs = getElements(".contact-form-input");
   inputs.forEach((input) => {
-    const isRequired = getElementAttribute(input, "data-required");
-    if (!isRequired) return;
-
-    addEvent(input, "blur", handleBlur);
+    addEvent(input, "blur", () => handleBlur(input));
     addEvent(input, "focus", handleFocus);
   });
   closePopupEvent();
@@ -65,10 +63,10 @@ const hidePopup = () => {
   });
 };
 
-const handleBlur = (e) => {
-  const name = e.target.name;
-  const value = e.target.value;
-  if (!value) {
+const handleBlur = (input) => {
+  const isError = inputValidation(input);
+  const name = getElementAttribute(input, "name");
+  if (isError) {
     handleError(name, true);
   }
 };
@@ -78,9 +76,16 @@ const handleFocus = (e) => {
   handleError(name);
 };
 
-const handleLoading = () => {
-  //   const subscribe = getElement(".subscribe");
-  //   return subscribe.classList.add("subscribe-loading");
+const handleLoading = (val) => {
+  const submitBtn = getElement(".contact-form-submit-btn");
+  const loader = getElement(".contact-form-submit-loader");
+  if (val) {
+    submitBtn.style.display = "none";
+    loader.classList.add("contact-form-submit-loader-active");
+  } else {
+    submitBtn.style.display = "block";
+    loader.classList.remove("contact-form-submit-loader-active");
+  }
 };
 
 const handleSuccess = (inputs) => {
@@ -95,27 +100,31 @@ const hadleSubmit = async (e) => {
   e.preventDefault();
   const inputs = getElements(".contact-form-input");
   const body = {};
+  const errors = [];
   inputs.forEach((input) => {
-    const name = input.name;
-    const value = input.value;
-    const isRequired = getElementAttribute(input, "data-required");
-    if (!value && isRequired) {
+    const isError = inputValidation(input);
+    const name = getElementAttribute(input, "name");
+    if (isError) {
+      errors.push(true);
       return handleError(name, true);
     }
-    body[name] = value;
+    body[name] = input.value;
   });
 
-  const { contactName, contactPhone } = body;
-  if (!contactName || !contactPhone) return;
-  handleLoading();
+  if (errors.length > 0) return;
+
+  handleLoading(true);
   try {
-    // await api.sendUserDetails(body);
+    await api.contact(body);
     handleSuccess(inputs);
-  } catch (error) {}
+  } catch (error) {
+  } finally {
+    handleLoading();
+  }
 };
 const handleError = (name, show) => {
   const error = getElement(`.${name}-error`);
-  console.log(error);
+
   if (show) {
     return (error.style.display = "block");
   }

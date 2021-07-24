@@ -18,7 +18,8 @@ function BigSlider({
 }) {
   return (
     <div
-      className={`big-slider-wrapper big-slider-wrapper-${
+      id={secondarySlider ? "big-slider-wrapper-with-secondary" : ""}
+      className={`big-slider-wrapper  big-slider-wrapper-${
         isLeft ? "left" : "right"
       }`}
     >

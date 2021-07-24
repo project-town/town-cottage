@@ -11,7 +11,6 @@ const Navbar = (props) => {
       <div className="navbar-flex">
         <a href="/#" className="navbar-logo">
           <img src={handleUrl(images.common.logo, _relativeURL, _ID)} />
-          <span className="navbar-logo-text">{_body}</span>
         </a>
         <ul className="navbar-links">
           {links.map((link) => {

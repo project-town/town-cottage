@@ -38,17 +38,34 @@ const Subscribe = (props) => {
         <div className="subscribe-form-flex flex-start">
           <section className="subscribe-form-section">
             <label htmlFor="name">{nameLabel}</label>
-            <input type="text" name="name" placeholder={namePlaceholder} />
+            <input
+              type="text"
+              name="name"
+              placeholder={namePlaceholder}
+              data-required={true}
+            />
             <p className="subscribe-form-error name-error">{name_error}</p>
           </section>
           <section className="subscribe-form-section">
             <label htmlFor="phone">{phoneLabel}</label>
-            <input type="text" name="phone" placeholder={phonePlaceholder} />
+            <input
+              data-type="phone"
+              type="number"
+              name="phone"
+              placeholder={phonePlaceholder}
+              data-required={true}
+            />
             <p className="subscribe-form-error phone-error">{phone_error}</p>
           </section>
           <section className="subscribe-form-section">
             <label htmlFor="email">{emailLabel}</label>
-            <input type="email" name="email" placeholder={emailPlaceholder} />
+            <input
+              type="email"
+              name="email"
+              data-type="email"
+              placeholder={emailPlaceholder}
+              data-required={true}
+            />
             <p className="subscribe-form-error email-error">{email_error}</p>
           </section>
           <div className="subscribe-form-section subscribe-form-submit">
