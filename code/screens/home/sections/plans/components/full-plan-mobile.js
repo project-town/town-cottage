@@ -33,7 +33,7 @@ function FullPlanMobile(props) {
         <button className="full-plan-close">
           <Img src={handleUrl(images.common.closeGray, _relativeURL, _ID)} />
         </button>
-        <Slider {...props} />
+        <Slider {...props} id={`${props.id}-mobile`} />
         <div className="full-plan-mobile-content-bottom">
           <section className="full-plan-mobile-content-bottom-title">
             <h2>{title}</h2>

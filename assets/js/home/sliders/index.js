@@ -101,6 +101,21 @@ export const createForestSlider = () => {
   createBigSlider("forest", true);
 };
 
+const initPlanSliders = () => {
+  const names = [
+    "plan-1-slider",
+    "plan-2-slider",
+    "plan-3-slider",
+    "plan-1-mobile-slider",
+    "plan-2-mobile-slider",
+    "plan-3-mobile-slider",
+  ];
+
+  names.forEach((name) => {
+    simpleSlider(name);
+  });
+};
+
 export const initSliders = () => {
   createLocationSlider();
   createConceptSlider();
@@ -108,7 +123,5 @@ export const initSliders = () => {
   createHeaderSlider();
   createVillageSlider();
   createForestSlider();
-  simpleSlider("plan-1-slider");
-  simpleSlider("plan-2-slider");
-  simpleSlider("plan-3-slider");
+  initPlanSliders();
 };
