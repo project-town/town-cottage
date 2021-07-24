@@ -20,7 +20,6 @@ const readMoreBtnsEvent = () => {
 };
 
 const showExtra = (text, btn) => {
-  console.log(text);
   if (text.style.display !== "flex") {
     btn.classList.add("read-more-hidden");
 

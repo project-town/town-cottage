@@ -1,7 +1,6 @@
 import React from "react";
 
 function Img({ src, alt, customClassName }) {
-  console.log(src);
   return (
     <img
       className={customClassName ? customClassName : ""}

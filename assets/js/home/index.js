@@ -37,7 +37,6 @@ const showPlan = () => {
   const plans = getElements(".plan");
 
   plans.forEach((plan) => {
-    console.log("plan");
     addEvent(plan, "click", () => {
       toggleBodyOverflow(true);
       const id = getElementAttribute(plan, "data-id");
@@ -55,9 +54,9 @@ const toggleMobilePlanView = () => {
   const allViews = getElements(".plan-view");
   selectionBtns.forEach((btn) => {
     const id = getElementAttribute(btn, "data-id");
+
     addEvent(btn, "click", () => {
       allViews.forEach((view) => {
-        console.log(view);
         if (view.classList.contains(id)) {
           view.style.display = "block";
         } else {
