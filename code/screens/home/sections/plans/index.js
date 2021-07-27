@@ -3,11 +3,7 @@ import animations from "../../../../../assets/js/animations";
 
 function Planes({ _body, plansList, title }) {
   return (
-    <div
-      className="plans section"
-      data-aos={animations.up}
-      data-aos-delay="100"
-    >
+    <div className="plans section">
       <div className="indicator" id={title}></div>
 
       {_body}

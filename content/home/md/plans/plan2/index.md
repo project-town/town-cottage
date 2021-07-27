@@ -1,6 +1,6 @@
 ---
 layout: screens/home/sections/plans/components/plan
-title: котедж №122
+title: котедж №111
 bedroomsText: 2 спальни
 bathroomText: 2 санузла
 familyText: 2 семьи
@@ -8,7 +8,7 @@ meters: 145 м²
 image: assets/images/home/plans/plan-1.png
 draw: assets/images/home/plans/plan.png
 drawSecond: assets/images/home/plans/plan.png
-id: plan-3
+id: plan-2
 date: 4 квартал 2021
 dateText: Дата ввода
 classLevel: Бизнес
@@ -20,9 +20,11 @@ firstPayText: Первый взнос
 btn:
   - /_shared/btns/popup-btn.md
 slides:
-  - assets/images/home/plans/plan-1-slider/img1.png
-  - assets/images/home/plans/plan-1-slider/img1.png
-  - assets/images/home/plans/plan-1-slider/img1.png
+  - slide1.md
+  - slide2.md
+  - slide3.md
+  - slide4.md
+  - slide5.md
 ---
 
 Материалы и технология строительсваМатериалы и технология строительсва Материалы и технология строительсваМатериалы и технология строительсва Материалы и технология строительсва Материалы и технология строительсва Материалы и технология строительсваМатериалы и технология строительсва Материалы и технология строительсва

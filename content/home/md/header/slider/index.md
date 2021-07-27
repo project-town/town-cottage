@@ -1,15 +1,18 @@
 ---
 layout: screens/home/components/big-slider/index
 slides:
-  - assets/images/home/header/slide1.png
-  - assets/images/home/header/slide1.png
-  - assets/images/home/header/slide1.png
-  - assets/images/home/header/slide1.png
+  - slide1.md
+  - slide2.md
+  - slide3.md
+  - slide4.md
+  - slide5.md
+  - slide6.md
+  - slide7.md
 
 boxes:
-  - boxes/box-1.md
-  - boxes/box-2.md
-  - boxes/box-3.md
+  - ../boxes/box-1.md
+  - ../boxes/box-2.md
+  - ../boxes/box-3.md
 callBtn:
   - /_shared/btns/popup-btn.md
 isLeft: true

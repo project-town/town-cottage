@@ -173,6 +173,9 @@ input {
   -moz-appearance: none;
   appearance: none; }
 
+a {
+  text-decoration: none; }
+
 .flex-start {
   display: flex;
   justify-content: flex-start;
@@ -288,7 +291,9 @@ h2 {
 
 .splide__slide img {
   object-position: center;
-  height: 100%; }
+  height: 100%;
+  width: 100%;
+  object-fit: cover; }
 
 .success {
   transition: 0.2s all;
@@ -432,11 +437,12 @@ h2 {
 
 .plans .full-plan {
   z-index: 99999;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
-  left: 0px;
-  top: 0px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   pointer-events: none;
   transition: 0.2s all; }
@@ -560,12 +566,12 @@ h2 {
     background: white;
     left: 50%;
     transform: translate(-50%);
-    top: 50%;
+    top: 7vh;
     width: 1248px;
     position: absolute;
     background: #fffcf0;
     height: 700px;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%); }
 
 @media only screen and (max-width: 1000px) {
   .plans h2 {
@@ -575,14 +581,22 @@ h2 {
     display: none; }
   .plans .full-plan-mobile {
     position: fixed;
-    top: 0%;
-    left: 0%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 999999;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center; }
+    .plans .full-plan-mobile .full-plan-close {
+      background: white;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
     .plans .full-plan-mobile * {
       color: rgba(0, 0, 0, 0.6); }
     .plans .full-plan-mobile-selectors {
@@ -599,7 +613,7 @@ h2 {
     .plans .full-plan-mobile-content {
       overflow-x: hidden;
       background: #fffcf0;
-      height: calc(100% - 100px);
+      height: calc(100% - 70px);
       position: relative;
       width: calc(100% - 20px);
       z-index: 99;
@@ -1272,6 +1286,8 @@ h2 {
     position: relative; }
     .map-text .btn {
       margin-top: 30px; }
+      .map-text .btn a {
+        color: white; }
     .map-text h2 {
       padding-top: 5px;
       border-top: 1px solid #ffffff;

@@ -1,5 +1,5 @@
 ---
 layout: screens/home/sections/forest
 sliderContainer:
-  - slider.md
+  - slider/index.md
 ---

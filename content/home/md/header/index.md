@@ -1,5 +1,5 @@
 ---
 layout: screens/home/sections/header
 sliderContainer:
-  - slider.md
+  - slider/index.md
 ---

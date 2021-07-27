@@ -1,23 +1,25 @@
 ---
 layout: screens/home/components/big-slider/index
 slides:
-  - assets/images/home/forest/slide-1.png
-  - assets/images/home/forest/slide-2.png
-  - assets/images/home/forest/slide-3.png
-  - assets/images/home/forest/slide-4.png
-  - assets/images/home/forest/slide-5.png
+  - slide1.md
+  - slide2.md
+  - slide3.md
+  - slide4.md
+  - slide5.md
+  - slide6.md
+  - slide7.md
 
 boxes:
-  - boxes/box-1.md
-  - boxes/box-2.md
+  - ../boxes/box-1.md
+  - ../boxes/box-2.md
 
 callBtn:
   - /_shared/btns/more.md
 secondarySlider:
-  - secondary-slider.md
+  - ../secondary-slider.md
 isLeft: true
 extraText:
-  - hiddenText.md
+  - ../hiddenText.md
 id: forest-extra
 extraBtnText: Подробнее
 ---

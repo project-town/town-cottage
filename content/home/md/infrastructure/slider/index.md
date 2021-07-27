@@ -5,4 +5,7 @@ slides:
   - slide2.md
   - slide3.md
   - slide4.md
+  - slide5.md
+  - slide6.md
+  - slide7.md
 ---

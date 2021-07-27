@@ -2,6 +2,8 @@
 layout: screens/home/sections/map/index
 btn: Google maps
 image: assets/images/home/maps/bg.png
+lat: 51.507351
+lng: -0.127758
 ---
 
 ## наши **контакты**

@@ -15,15 +15,7 @@ function Secondary({ _relativeURL, _ID, slides }) {
         </button>
       </div>
       <div className="splide__track">
-        <ul className="splide__list flex-start">
-          {slides.map((slide) => {
-            return (
-              <li className="splide__slide">
-                <Img src={handleUrl(slide, _relativeURL, _ID)} />
-              </li>
-            );
-          })}
-        </ul>
+        <ul className="splide__list flex-start">{slides}</ul>
       </div>
     </div>
   );

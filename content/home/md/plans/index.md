@@ -2,9 +2,9 @@
 layout: screens/home/sections/plans/index
 title: Планировки
 plansList:
-  - plan-1.md
-  - plan-2.md
-  - plan-3.md
+  - plan1/index.md
+  - plan2/index.md
+  - plan3/index.md
 ---
 
 ## УДОБНЫЕ

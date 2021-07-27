@@ -1,21 +1,22 @@
 ---
 layout: screens/home/components/big-slider/index
 slides:
-  - assets/images/home/village/slide-1.png
-  - assets/images/home/village/slide-2.png
-  - assets/images/home/village/slide-3.png
-  - assets/images/home/village/slide-4.png
-  - assets/images/home/village/slide-5.png
-  - assets/images/home/village/slide-6.png
+  - slide1.md
+  - slide2.md
+  - slide3.md
+  - slide4.md
+  - slide5.md
+  - slide6.md
+  - slide7.md
 
 boxes:
-  - boxes/box-1.md
-  - boxes/box-2.md
+  - ../boxes/box-1.md
+  - ../boxes/box-2.md
 
 secondarySlider:
-  - secondary-slider.md
+  - ../secondary-slider.md
 extraText:
-  - hiddenText.md
+  - ../hiddenText.md
 id: village-extra
 extraBtnText: Подробнее
 ---

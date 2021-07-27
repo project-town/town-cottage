@@ -51,15 +51,7 @@ function BigSlider({
           </div>
         )}
         <div className="splide__track">
-          <ul className="splide__list">
-            {slides.map((slide) => {
-              return (
-                <li className="splide__slide">
-                  <Img src={handleUrl(slide, _relativeURL, _ID)} />
-                </li>
-              );
-            })}
-          </ul>
+          <ul className="splide__list">{slides}</ul>
         </div>
       </div>
       {secondarySlider && secondarySlider}

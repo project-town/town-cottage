@@ -15,15 +15,7 @@ function Slide({ id, _relativeURL, _ID, slides }) {
         </button>
       </div>
       <div className="splide__track">
-        <ul className="splide__list">
-          {slides.map((slide) => {
-            return (
-              <li className="splide__slide">
-                <Img src={handleUrl(slide, _relativeURL, _ID)} />
-              </li>
-            );
-          })}
-        </ul>
+        <ul className="splide__list">{slides}</ul>
       </div>
     </div>
   );

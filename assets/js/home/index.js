@@ -38,6 +38,7 @@ const showPlan = () => {
 
   plans.forEach((plan) => {
     addEvent(plan, "click", () => {
+      sctollToElement();
       toggleBodyOverflow(true);
       const id = getElementAttribute(plan, "data-id");
       const full = getElements(`.${id}`);
@@ -46,6 +47,11 @@ const showPlan = () => {
       });
     });
   });
+};
+
+const sctollToElement = () => {
+  const element = getElement(".plans");
+  element.scrollIntoView();
 };
 
 const toggleMobilePlanView = () => {

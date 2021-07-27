@@ -1,9 +1,11 @@
 ---
 layout: screens/home/components/big-slider/secondary
 slides:
-  - assets/images/home/forest/slide-1.png
-  - assets/images/home/forest/slide-2.png
-  - assets/images/home/forest/slide-3.png
-  - assets/images/home/forest/slide-4.png
-  - assets/images/home/forest/slide-5.png
+  - slider/slide1.md
+  - slider/slide2.md
+  - slider/slide3.md
+  - slider/slide4.md
+  - slider/slide5.md
+  - slider/slide6.md
+  - slider/slide7.md
 ---
