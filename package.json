@@ -1,7 +1,7 @@
 {
-  "name": "orbs-website",
+  "name": "cottage-town",
   "version": "1.0.0",
-  "description": "Website for Orbs.com",
+  "description": "Website for cottage-town",
   "main": "index.js",
   "scripts": {
     "build": "cuttlebelle",
