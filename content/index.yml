@@ -1,5 +1,6 @@
 layout: page/index
 script: home/index
+title: title
 navbar:
   - /_shared/navbar/index.md
 footer:
