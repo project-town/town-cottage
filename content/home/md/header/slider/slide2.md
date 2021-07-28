@@ -1,4 +1,4 @@
 ---
 layout: screens/home/components/big-slider/slide
-img:
+img: https://ibb.co/gZCzPnV
 ---
